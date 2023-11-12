@@ -92,7 +92,7 @@ class User extends CI_Controller
         $status = $this->user_model->deleteUser($id);
         if($status==true)
         {
-             $this->session->set_flashdata('success','successfully Del');
+             $this->session->set_flashdata('deleted','successfully Deleted');
              redirect(base_url('user/index/'));
  
         }

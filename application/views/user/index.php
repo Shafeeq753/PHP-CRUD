@@ -11,7 +11,6 @@
                         <tr>
                             <th>S.NO</th>
                             <th>Username</th>
-                            <th>Email</th>
                             <th>Mobile</th>
                             <th>Address</th>
                             <th>Options</th>
@@ -23,12 +22,11 @@
                         <tr>
                             <td><?=$i++?></td>
                             <td><?=$row['username']?></td>
-                            <td><?=$row['mail']?></td>
                             <td><?=$row['mobile']?></td>
                             <td><?=$row['address']?></td>
                             <td>
                                 <a href="<?=base_url()?>user/edit/<?=$row['id']?>" class="btn btn-sm btn-primary">Edit</a>
-                                <a href="<?=base_url()?>user/delete/<?=$row['id']?>" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="<?=base_url()?>user/delete/<?=$row['id']?>" onclick="return confirm('Are you sure you want to remove your friend.You dont often do that')" class="btn btn-sm btn-danger">Delete</a>
                             </td>
                         </tr>
                         <?php } ?>
@@ -39,6 +37,11 @@
                 <?php if ($this->session->flashdata('success')) { ?>
                     <div class="alert alert-success" role="alert">
                         Successfully Updated!
+                    </div>
+                <?php } ?>
+                <?php if ($this->session->flashdata('deleted')) { ?>
+                    <div class="alert alert-success" role="alert">
+                        Successfully Deleted!
                     </div>
                 <?php } ?>
                 <?php if ($this->session->flashdata('error')) { ?>

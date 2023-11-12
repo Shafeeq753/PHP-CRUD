@@ -11,11 +11,7 @@
                         <input type="text" name="username" placeholder="Username" value="<?=$user->username?>" class="form-control" id="username">
 
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" name="email" id="email" value="<?=$user->mail?>" placeholder="Email" aria-describedby="emailHelp">
-
-                    </div>
+                   
                     <div class="mb-3">
                         <label for="mobile" class="form-label">Mobile</label>
                         <input type="text" maxlength="10" class="form-control" value="<?=$user->mobile?>" name="mobile" placeholder="Mobile" id="mobile">

@@ -11,10 +11,7 @@
                         <label for="username" class="form-label">Name</label>
                         <input type="text" name="username" placeholder="Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" placeholder="Email" class="form-control" name="email" id="email">
-                    </div>
+                   
                     <div class="mb-3">
                         <label for="mobile" class="form-label">Mobile</label>
                         <input type="text" maxlength="10" placeholder="mobile" class="form-control" name="mobile" id="mobile">
