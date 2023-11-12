@@ -103,4 +103,31 @@ class User extends CI_Controller
         }
         
     }
+    public function login(){
+        $this->load->helper('url');
+        $this->load->view('login_form');
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+    }
+
+    public function login_user(){
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+        $this->load->database();
+        $this->load->model('user_model');
+        $user = $this->user_model->getUser($username);
+
+        if($user = $this->user_model->getUser($username)){
+            if($user->password==$password){
+                echo "Login Successfully";
+                $this->session->set_userdata('id',$user_data)
+            }else{
+                echo "Login Error";
+            }
+        }else{
+            echo "No account exists with this account";
+        }
+    }
+    
+    
 }

@@ -45,4 +45,8 @@ class User_model extends CI_Model
             return false;
         }
     }
+
+    public function getUser($username){
+        $this
+    }
 }
