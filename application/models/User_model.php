@@ -46,7 +46,7 @@ class User_model extends CI_Model
         }
     }
 
-    public function getUser($username){
-        $this
+    public function getUserr($username){
+        return $this->db->where('username',$username)->get('users')->row();
     }
 }

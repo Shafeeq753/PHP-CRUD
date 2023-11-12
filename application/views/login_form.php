@@ -78,7 +78,7 @@ input[type=submit]:hover {
         <label for="lname">Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="email" placeholder="Your Name">
+        <input type="text" id="lname" name="username" placeholder="Your Name">
       </div>
     </div>
 		<div class="row">
