@@ -12,13 +12,13 @@ class User extends CI_Controller
         if($_SERVER['REQUEST_METHOD']=='POST')
     {
        $username =  $this->input->post('username');
-       $mail =  $this->input->post('mail');
+    //    $email =  $this->input->post('email');
        $mobile =  $this->input->post('mobile');
        $address =  $this->input->post('address');
 
        $data = array(
           'username' => $username,
-          'mail' => $mail,
+        //   'email' => $email,
           'mobile' => $mobile,
           'address' => $address
        );
